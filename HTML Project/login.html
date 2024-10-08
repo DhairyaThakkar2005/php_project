@@ -1,27 +1,23 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        
-        <div class="mydiv">
-           
-            <form>
-                <div class="form-group">
-                    <h1>Login Page</h1>
-                <label for="User Id" >User Id</label><br>
-                <br>
-                <input type="text" class="form-control"><br>
-                <br>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mydiv">
+        <form id="loginForm">
+            <div class="form-group">
+                <h1>Login Page</h1>
+                <label for="UserId">User Id</label><br><br>
+                <input type="text" class="form-control" id="userId"><br><br>
             </div>
             <div class="form-group">
-                <label for="Password">Enter your Password</label><br>
-                <br>
-                <input type="password" class="form-control">
+                <label for="Password">Enter your Password</label><br><br>
+                <input type="password" class="form-control" id="password">
             </div>
-                <input type="Submit" class="btn" >
-                <p>Already have an account? <a href="Register.html">Register here</a></p>
-            </form>
-        </div>
-    </body>
+            <input type="submit" class="btn">
+            <p>Already have an account? <a href="Register.html">Register here</a></p>
+        </form>
+        <script src="index.js"></script>
+    </div>
+</body>
 </html>

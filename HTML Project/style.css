@@ -61,7 +61,7 @@ nav {
 .search-section {
     width: 100%;
     max-width: 1200px;
-    background: white;
+    background:white url;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
@@ -206,21 +206,22 @@ nav {
     margin: auto;
     width: 500px;
     max-width: 90%;
+    font-size: 18px;
 }
 
 .mydiv form {
-    width: 100%;
-    height: 75%;
+    width: 80%;
+    height: 80%;
     padding: 20px;
-    background: #2c3338;
-    border-radius: 4px;
+    background: transparent;
+    border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .mydiv form h1 {
     text-align: center;
     margin-bottom: 24px;
-    color: white;
+    color: #6d4afe;
 }
 
 .mydiv form .form-control {
@@ -258,3 +259,4 @@ nav {
     margin-top: 5%;
     text-align: center;
 }
+
