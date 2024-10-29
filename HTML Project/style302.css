@@ -66,9 +66,14 @@ nav {
 }
 
 .property img {
-    max-width: 100%;
-    border-radius: 8px;
+    width: 200%; /* Makes the image responsive */
+    max-width: 370px; /* Limits the width of the image */
+    height: 300px; /* Maintains aspect ratio */
+    border-radius: 8px; /* Keeps the rounded corners */
+    display: block; /* Centers the image within the parent */
+    margin-right: 70%;
 }
+
 
 .property h3 {
     margin: 15px 0;

@@ -4,7 +4,6 @@
 /* Global Styles */
 * {
     margin: 0;
-    margin-left: 3%;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -12,8 +11,8 @@
 
 body {
     min-height: 100vh;
-    background: linear-gradient(180deg, #f7cac9 0%, #f0b7a4 100%);
-    background-image: url('sleepy.jpg');
+    
+    
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -36,6 +35,7 @@ nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    margin-right: 15px;
     display: flex;
     gap: 20px; /* Adds space between "About" and "Login" */
 }
@@ -138,6 +138,7 @@ nav {
     border-radius: 50px;
     width: 100%;
     margin-right: 10px;
+    font-size: 1rem;
 }
 
 .location {
@@ -202,47 +203,61 @@ nav {
     opacity: 0.1;
 }
 
-/* Form Styling */
+/* login */
 .mydiv {
     margin: auto;
     width: 500px;
     max-width: 90%;
     font-size: 18px;
+    
 }
-
+/* form box */
 .mydiv form {
-    width: 85%;
-    height: 60%;
-    padding: 20px;
+    
+    height: 55%;
+    width: 80%;
     background: transparent;
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Ensures content is distributed from top to bottom */
+    /* background: rgba( 255, 255, 255, 0.05 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8px );
+-webkit-backdrop-filter: blur( 8px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 }
 
+
+/* heading */
 .mydiv form h1 {
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 29px;
     color: #6d4afe;
 }
 
+
+/* text area */
 .mydiv form .form-control {
     width: 100%;
     height: 40px;
     background: white;
-    border-radius: 4px;
+    border-radius: 8px;
     border: 1px solid silver;
-    margin: 10px 0 18px 0;
     padding: 0 10px;
+    margin-top: 10px;
+
 }
 
+/* submit button */
 .mydiv form .btn {
     display: block;
     width: 120px;
     height: 34px;
-    margin: 3% auto 0 auto;
+    margin: 1% auto 0 auto;
     border: none;
     outline: none;
     background: #614cea;
@@ -255,17 +270,127 @@ nav {
     padding: 2%;
 }
 
+
+/* password property */
 .mydiv form p {
     text-align: center;
-    margin-top: auto; /* Ensures the link stays at the bottom */
+    margin-top: 10px; /* Ensures the link stays at the bottom */
     margin-bottom: 0; /* Avoids extra margin below the paragraph */
 }
 
+/* register here property */
 .mydiv form p a {
     color: #614cea;
     text-decoration: none;
+    margin-left: 1%;
 }
 
-.mydiv form p a:hover {
+
+
+
+/* register */
+.mydiv1 {
+    margin: auto;
+    width: 500px;
+    max-width: 90%;
+    font-size: 18px;
+}
+
+.mydiv1 form {
+    width: 85%;
+    height: 90%;
+    padding: 20px;
+    background: transparent;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is distributed from top to bottom */
+    /* background: rgba( 255, 255, 255, 0.1 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8px );
+-webkit-backdrop-filter: blur( 8px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+
+.mydiv1 form h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #6d4afe;
+}
+
+.mydiv1 form .form-control1 {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid silver;
+    margin: 10px 0 18px 0;
+    padding: 0 10px;
+}
+
+.mydiv1 form p {
+    text-align: center;
+    margin-top: auto; /* Ensures the link stays at the bottom */
+    margin-bottom: 0; /* Avoids extra margin below the paragraph */
+    
+}
+
+.mydiv1 form p a {
+    color: #614cea;
+    text-decoration: none;
+    
+}
+
+.mydiv1 form p a:hover {
     text-decoration: underline;
 }
+
+.mydiv1 form .btn {
+    display: block;
+    width: 120px;
+    height: 34px;
+    margin: 6% auto 0 auto;
+    border: none;
+    outline: none;
+    background: #614cea;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 4px;
+    transition: 0.3s;
+    padding: 2%;
+}
+
+.property {
+    box-sizing: border-box;
+    width: 400px; /* Set a specific width for the property box */
+    max-height: 350px; /* Limit the height of the box */
+    margin: 20px; /* Adjusts space between properties */
+    padding: 20px; /* Inner space for content */
+    background: transparent ;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for a lifted effect */
+    text-align: left; /* Align text to the left */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+.properties-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between properties */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    margin-top: 20px;
+}
+.property:hover {
+    transform: scale(1.05); /* Slightly enlarges the box on hover */
+}
+
+.property img {
+    width: 370px; /* Make the image responsive */
+    height: 200px; /* Maintain aspect ratio */
+    border-radius: 8px; /* Round image corners */
+}
+
+

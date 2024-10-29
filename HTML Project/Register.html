@@ -3,36 +3,34 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="mydiv">
-            <form>
-                <div class="form-group">
+        <div class="mydiv1">
+            <form action="register.php" method="post">
+                <div class="form-group1">
                     <h1>Registration Page</h1>
                 </div>
                 
-                <div class="form-group">
-                    <label for="name">Name</label><br>
-                    <input type="text" class="form-control" id="name"><br>
+                <div class="form-group1">
 
-                    <label for="dob">Date of Birth</label><br>
-                    <input type="date" class="form-control" id="dob"><br>
+                    <label for="name">Name</label><br>
+                    <input type="text" class="form-control1" id="name" name="name" required>
+
+                    <label for="email">Email Id</label><br>
+                    <input type="email" class="form-control1" id="email" name="email" required>
 
                     <label for="phone">Phone Number</label><br>
-                    <input type="tel" class="form-control" id="phone"><br>
-                    
-                    <label for="email">Email</label><br>
-                    <input type="email" class="form-control" id="email"><br>
-                </div>
+                    <input type="tel" class="form-control1" id="phone" name="phone"required>
 
-                <div class="form-group">
-                    <label for="Password">Password</label><br>
-                    <input type="password" class="form-control" id="password"><br>
                 </div>
-                <div class="form-group">
+                <div class="form-group1">
+                    <label for="Password">Password</label><br>
+                    <input type="password" class="form-control1" id="password" name="Password" required>
+                </div>
+                <div class="form-group1">
                     <label for="confirm-password">Confirm Password</label><br>
-                    <input type="password" class="form-control" id="confirm-password"><br>
+                    <input type="password" class="form-control1" id="confirm-password" name="confirm-password" required>
                 </div>
                 <input type="submit" class="btn" value="Register">
-                <p>Already have an account? <a href="login.html">Login here</a></p>
+                <p>Already have an account?<a href="login.html">Login here</a></p>
             </form>
         </div>
     </body>

@@ -7,14 +7,15 @@
         <form action="login.php" method="post">
             <div class="form-group">
                 <h1>Login Page</h1>
-                <label for="UserId">User Id</label><br>
-                <input type="text" class="form-control" id="userId" name="UserId"><br>
+                <label for="email">Email Id</label><br>
+                <input type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="Password">Enter your Password</label><br>
-                <input type="password" class="form-control" id="password" name="Password">
+                <input type="password" class="form-control" id="password" name="Password" required>
             </div>
-            <input type="submit" class="btn">
+            <input type="submit" class="btn" value="Login">
+
             <p>Already have an account? <a href="Register.html">Register here</a></p>
         </form>
         <script src="index.js"></script>
