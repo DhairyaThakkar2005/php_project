@@ -1,11 +1,13 @@
 <?php
+session_start(); // Start the session to store the login message
+
 $Email = $_POST['email'];
 $Password = $_POST['Password'];
 
-$conn = mysqli_connect("localhost", "root", "system", "housing_rental");
+include "conn.php";
 
 $stmt = $conn->prepare("SELECT password FROM user WHERE email_id = ?");
-$stmt->bind_param("s", $Email); // 's' specifies the variable type => 'string'
+$stmt->bind_param("s", $Email);
 $stmt->execute();
 $result = $stmt->get_result();
 
@@ -15,14 +17,22 @@ if ($result->num_rows > 0) {
     $storedPassword = $row['password'];
 
     // Compare the input password with the stored password
-    if ($Password === $storedPassword) { // Use this if passwords are not hashed
-        echo "Login Successfully";
+    if ($Password === $storedPassword) {
+        // Set session message
+        $_SESSION['message'] = "Login Successfully";
         
+        // Redirect to the index page with the message in the URL
+        header("Location: main.html?message=Login%20Successfully");
+        exit; // Make sure no further code runs after redirect
     } else {
-        echo "Invalid password";
+        $_SESSION['message'] = "Invalid password";
+        header("Location: login.php?message=Invalid%20password");
+        exit;
     }
 } else {
-    echo "No user found";
+    $_SESSION['message'] = "No user found with that email";
+    header("Location: login.php?message=No%20user%20found%20with%20that%20email");
+    exit;
 }
 
 // Close the statement and connection

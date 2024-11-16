@@ -1,9 +1,13 @@
 <?php
+
+session_start();
+
 $Name = $_POST['name'];
 $Email = $_POST['email'];
 $Phone_no = $_POST['phone'];
-$Password = $_POST['Password'];
-$Confirm_Password = $_POST['confirm-password'];
+$role=$_POST['role'];
+$password = $_POST['password'];
+$confirm_Password = $_POST['confirm_password'];
 
 // Establish connection
 $conn = mysqli_connect("localhost", "root", "system", "housing_rental");
@@ -13,23 +17,18 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Check if passwords match
-if ($Password !== $Confirm_Password) {
-    echo "Passwords do not match";
-    exit;
-}
-
 // Prepare the SQL statement
-$stmt = $conn->prepare("INSERT INTO user (name, email_id, phone_no, password, confirm_password) VALUES (?, ?, ?, ?, ?)");
-$stmt->bind_param("sssss", $Name, $Email, $Phone_no, $Password, $Confirm_Password);
+$stmt = $conn->prepare("INSERT INTO user (name, email_id, phone_no, role, password, confirm_password) VALUES (?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("ssssss", $Name, $Email, $Phone_no, $role, $password, $confirm_Password);
 
 // Execute the statement
 if ($stmt->execute()) {
-    echo "Registration Successful";
+    $_SESSION['message'] = "Registered successfully!";
+    header("Location: login.html");
+    exit();  // Ensure the script stops here after redirection
 } else {
-    echo "Registration failed: " . $stmt->error;
+    echo "Error registering landlord: " . $stmt->error;
 }
-
 // Close the statement and connection
 $stmt->close();
 $conn->close();

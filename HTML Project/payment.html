@@ -50,14 +50,11 @@
 <body>
     <div class="container">
         <h2>Payment Details</h2>
-        <form action="#" method="post">
+        <form action="payment.php" method="post">
             <label for="payment_method">Payment Method:</label>
             <br>
-            <input type="radio" id="credit_card" name="payment_method" value="credit_card" required>
-            <label for="credit_card">Credit Card</label>
-            <br>
-            <input type="radio" id="debit_card" name="payment_method" value="debit_card">
-            <label for="debit_card">Debit Card</label>
+            <input type="radio" id="card" name="payment_method" value="card" required>
+            <label for="card">Credit Card/Debit Card</label>
             <br>
             <input type="radio" id="net_banking" name="payment_method" value="net_banking">
             <label for="net_banking">Net Banking</label>
@@ -96,7 +93,7 @@
                     var cardDetails = document.getElementById('card_details');
                     var bankingDetails = document.getElementById('banking_details');
                     var upiDetails = document.getElementById('upi_details');
-                    if (this.value === 'credit_card' || this.value === 'debit_card') {
+                    if (this.value === 'card') {
                         cardDetails.style.display = 'block';
                         bankingDetails.style.display = 'none';
                         upiDetails.style.display = 'none';

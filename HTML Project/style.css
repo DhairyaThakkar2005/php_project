@@ -11,8 +11,6 @@
 
 body {
     min-height: 100vh;
-    
-    
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -29,27 +27,29 @@ nav {
     position: absolute; /* Makes the nav float on top */
     top: 0;
     right: 0;
+    background-color: #2c3338;
+    padding: 15px;
 }
 
 .nav-links {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
-    margin-right: 15px;
     display: flex;
-    gap: 20px; /* Adds space between "About" and "Login" */
+    gap:5px; /* Adds space between "About" and "Login" */
 }
 
 .nav-links a {
+    color:white;
     text-decoration: none;
-    color: #000000;
     font-size: 18px;
 }
 
 .nav-links .login-button {
-    padding: 8px 16px;
-    border: 2px solid #000000;
+    
+    padding: 6px 20px;
     border-radius: 20px;
+    color: white;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -58,12 +58,14 @@ nav {
     color: #ffffff;
 }
 
+
 /* Section Styling */
 .search-section {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     background:white url;
     padding: 30px;
+    margin-top: 65px;
     border-radius: 12px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -184,7 +186,6 @@ nav {
     position: absolute;
     top: 10%;
     left: 5%;
-    background: url('lamp-icon.png') no-repeat;
     background-size: contain;
     width: 100px;
     height: 200px;
@@ -216,7 +217,7 @@ nav {
     
     height: 55%;
     width: 80%;
-    background: transparent;
+    background-color: #2c3338;
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     padding: 1rem;
@@ -244,12 +245,15 @@ border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 .mydiv form .form-control {
     width: 100%;
     height: 40px;
-    background: white;
+    background: #fff;
     border-radius: 8px;
     border: 1px solid silver;
     padding: 0 10px;
     margin-top: 10px;
-
+    
+}
+.mydiv label{
+    color: #c7bebe;
 }
 
 /* submit button */
@@ -264,28 +268,38 @@ border: 1px solid rgba( 255, 255, 255, 0.18 ); */
     cursor: pointer;
     font-size: 16px;
     text-transform: uppercase;
-    color: white;
+    color: #fff;
     border-radius: 4px;
     transition: 0.3s;
     padding: 2%;
 }
 
 
-/* password property */
 .mydiv form p {
     text-align: center;
     margin-top: 10px; /* Ensures the link stays at the bottom */
     margin-bottom: 0; /* Avoids extra margin below the paragraph */
 }
 
-/* register here property */
 .mydiv form p a {
     color: #614cea;
     text-decoration: none;
     margin-left: 1%;
 }
 
+/* Style for invalid input fields (red border) */
+.form-control.error {
+    border-color: red;
+}
 
+/* Style for the error messages */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    padding-left: 10px;
+    text-align: left;
+}
 
 
 /* register */
@@ -298,9 +312,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 
 .mydiv1 form {
     width: 85%;
-    height: 90%;
+    height: 120%;
     padding: 20px;
-    background: transparent;
+    background-color: #2c3338;
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -313,11 +327,33 @@ backdrop-filter: blur( 8px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 }
+/* Specific styling for the Role label and select */
+.mydiv1 label[for="role"] {
+    color: #c7bebe; /* Light color for the label text */
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.mydiv1 select#role {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid silver;
+    margin: 10px 0 18px 0;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
 
 .mydiv1 form h1 {
     text-align: center;
     margin-bottom: 24px;
     color: #6d4afe;
+}
+.mydiv1 label{
+    color: #c7bebe;
 }
 
 .mydiv1 form .form-control1 {
@@ -332,7 +368,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 
 .mydiv1 form p {
     text-align: center;
-    margin-top: auto; /* Ensures the link stays at the bottom */
+    margin-top: 20px; /* Ensures the link stays at the bottom */
     margin-bottom: 0; /* Avoids extra margin below the paragraph */
     
 }
@@ -351,7 +387,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 ); */
     display: block;
     width: 120px;
     height: 34px;
-    margin: 6% auto 0 auto;
+    margin: 4% auto 0 auto;
     border: none;
     outline: none;
     background: #614cea;
@@ -366,8 +402,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 
 .property {
     box-sizing: border-box;
-    width: 400px; /* Set a specific width for the property box */
-    max-height: 350px; /* Limit the height of the box */
+     width: 400px; /*space between property */
+    max-height: 400px; /* Limit the height of the box */
     margin: 20px; /* Adjusts space between properties */
     padding: 20px; /* Inner space for content */
     background: transparent ;
@@ -392,5 +428,92 @@ border: 1px solid rgba( 255, 255, 255, 0.18 ); */
     height: 200px; /* Maintain aspect ratio */
     border-radius: 8px; /* Round image corners */
 }
+.details-button {
+    background-color: #614cea;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: #3a2db3;
+}
+
+/* About Section */
+.about-container {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.about-container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+/* Contact Section */
+.contact-info {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.contact-info h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #555;
+}
 
 
+/* Dropdown Styles */
+nav ul.nav-links .dropdown {
+    position: relative;
+}
+
+nav ul.nav-links .dropdown .dropdown-btn {
+    cursor: pointer;
+}
+
+nav ul.nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+}
+
+nav ul.nav-links .dropdown-content a {
+    padding:1px;
+    text-align: left;
+    color: white;
+}
+
+nav ul.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav ul.nav-links .dropdown-content a:hover {
+    background-color: #575757;
+}
+
+nav ul.nav-links li a:hover {
+    background-color: #575757;
+}
